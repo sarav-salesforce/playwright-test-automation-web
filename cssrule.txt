@@ -1,0 +1,20 @@
+
+1) If you have Id tag in your DOM then 
+
+css is 'tagname#id' or just '#id'
+
+eg: input#user-name or #user-name
+
+2) If class attribute is present
+
+css is tagname.class or just .class
+
+eg: input.form_input or .form_input
+
+3) with any attribute
+
+css is [attribute='value']
+
+eg: [type='text'] or [data-test='username'] or [placeholder='Username']
+
+<input type="text" class="form_input" data-test="username" id="user-name" name="user-name" placeholder="Username" autocorrect="off" autocapitalize="none" value="">

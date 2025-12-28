@@ -1,0 +1,32 @@
+[
+    {
+        "testName": "Array 1",
+        "ProductName": "'Desk Lamp'",
+        "FullName": "'Sarav test'",
+        "Email": "'sarav19@salesforce.com'",
+        "StreetAddress": "'20 GraceChruch Street'",
+        "City": "'London'",
+        "PostCode": "'EC2M'",
+        "ShippingMethod": "'standard'",
+        "paymentMethod": "'Credit Card'",
+        "cardNumber": "'4111-1111-1111-1111'",
+        "cardName": "'Sarav Ramaswamy'",
+        "cardExpiry": "'12/26'",
+        "cardCVV": "123"
+    },
+    {
+        "testName": "Array 2",
+        "ProductName": "Desk Lamp",
+        "FullName": "'Sarav test'",
+        "Email": "'sarav19@salesforce.com'",
+        "StreetAddress": "'20 GraceChruch Street'",
+        "City": "'London'",
+        "PostCode": "'EC2M'",
+        "ShippingMethod": "'standard'",
+        "paymentMethod": "'Credit Card'",
+        "cardNumber": "'4111-1111-1111-1111'",
+        "cardName": "'Sarav Ramaswamy'",
+        "cardExpiry": "'12/26'",
+        "cardCVV": "123"
+    }
+]
