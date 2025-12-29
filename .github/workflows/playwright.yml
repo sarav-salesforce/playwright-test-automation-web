@@ -25,6 +25,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Checkout web app repository
+        uses: actions/checkout@v4
+        with:
+          repository: sarav-salesforce/web-app-test-automation
+          path: web-app
+
+      - name: Install web app dependencies
+        working-directory: web-app
+        run: npm ci
+
+      - name: Start Web App server
+        working-directory: web-app
+        run: |
+          npm start &
+          echo $! > web-app-server.pid
+          npx wait-on http://localhost:3000    
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
