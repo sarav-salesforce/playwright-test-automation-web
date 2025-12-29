@@ -4,8 +4,8 @@ import { json } from 'stream/consumers';
 import { readExcelData } from '../utils_ts/excelReader';
 import path from 'path';
 import { CartPage } from '../pageObject_ts/CartPage';
-import { ProductSelectionPage } from '../pageObject_ts/productSelectionPage';
-import  { CheckoutPage }  from '../pageObject_ts/CheckoutPage';
+import { ProductSelectionPage } from '../pageObject_ts/ProductSelectionPage';
+import { CheckoutPage } from '../pageObject_ts/CheckoutPage';
 
 
 import { readTestData } from '../utils_ts/readExcelForTest';
