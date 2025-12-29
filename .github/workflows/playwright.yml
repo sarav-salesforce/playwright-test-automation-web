@@ -2,10 +2,11 @@ name: Playwright Tests
 
 on:
   push:
-    branches: [ "**" ]
+    branches:
+      - feature/cicd
 
   schedule:
-    - cron: '17 20 * * *'  
+    - cron: '30 20 * * *'  
 
   workflow_dispatch:  
 
