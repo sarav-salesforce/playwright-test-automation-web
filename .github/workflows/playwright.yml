@@ -24,6 +24,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Checkout web app under test
+        uses: actions/checkout@v4
+        with:
+          repository: sarav-salesforce/web-app-test-automation
+          path: app-under-test
+
+      - name: Install web app dependencies
+        run: npm ci
+        working-directory: app-under-test
+
+      - name: Start web app
+        run: |
+          npm start &
+          echo $! > server.pid
+          npx wait-on http://localhost:3000
+        working-directory: app-under-test
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
@@ -31,6 +48,14 @@ jobs:
         env:
           CI: true
         run: npx playwright test
+
+      - name: Stop web app
+        if: ${{ always() }}
+        run: |
+          if [ -f server.pid ]; then
+            kill $(cat server.pid) || true
+          fi
+        working-directory: app-under-test
 
       - name: Upload Playwright report
         if: ${{ always() }}
